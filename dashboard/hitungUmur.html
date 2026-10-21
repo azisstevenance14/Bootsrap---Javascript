@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Hitung Usia</title>
+    <!-- Path ke Bootstrap CSS (Naik 1 folder ke luar dashboard) -->
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- NAVBAR SERAGAM -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Dashboard App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Nav Link Kalkulator -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="kalkulator.html">Kalkulator</a>
+                    </li>
+                    <!-- Nav Link Hitung Usia (Active) -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="hitungUmur.html">Hitung Usia</a>
+                    </li>
+                    <!-- Nav Link Logout -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light btn-sm mt-1 mt-lg-0" id="btnLogout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA: HITUNG USIA -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-center mb-4 fw-bold text-primary">Kalkulator Usia</h4>
+                        
+                        <form id="usiaForm">
+                            <!-- Input Tanggal Lahir -->
+                            <div class="mb-3">
+                                <label for="tanggalLahir" class="form-label">Pilih Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="tanggalLahir" required>
+                            </div>
+
+                            <!-- Tombol Hitung Usia -->
+                            <button type="submit" class="btn btn-primary w-100 mt-2">Hitung Usia Saya</button>
+                        </form>
+
+                        <!-- Tampilan Hasil -->
+                        <div class="mt-4 p-3 bg-light rounded text-center border">
+                            <h6 class="text-muted mb-1">Usia Anda Saat Ini:</h6>
+                            <h4 id="hasilUsia" class="fw-bold text-success mb-0">-</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap & JS Logic Hitung Usia -->
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Javascript/hitungUsia.js"></script>
+</body>
+</html>

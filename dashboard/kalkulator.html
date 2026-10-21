@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Kalkulator</title>
+    <!-- Path ke Bootstrap CSS (Naik 1 folder ke luar dashboard) -->
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+    <!-- NAVBAR SERAGAM -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Dashboard App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Nav Link Kalkulator (Active) -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="kalkulator.html">Kalkulator</a>
+                    </li>
+                    <!-- Nav Link Hitung Usia -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="hitungUmur.html">Hitung Usia</a>
+                    </li>
+                    <!-- Nav Link Logout -->
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-light btn-sm mt-1 mt-lg-0" id="btnLogout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA: KALKULATOR -->
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-center mb-4 fw-bold text-primary">Kalkulator Sederhana</h4>
+                        
+                        <form id="kalkulatorForm">
+                            <!-- Input Angka Pertama -->
+                            <div class="mb-3">
+                                <label for="angka1" class="form-label">Angka Pertama</label>
+                                <input type="number" class="form-control" id="angka1" placeholder="Masukkan angka pertama" required>
+                            </div>
+
+                            <!-- Pilihan Operator -->
+                            <div class="mb-3">
+                                <label for="operator" class="form-label">Pilih Operasi</label>
+                                <select class="form-select" id="operator" required>
+                                    <option value="tambah">Tambah (+)</option>
+                                    <option value="kurang">Kurang (-)</option>
+                                    <option value="kali">Kali (×)</option>
+                                    <option value="bagi">Bagi (÷)</option>
+                                </select>
+                            </div>
+
+                            <!-- Input Angka Kedua -->
+                            <div class="mb-3">
+                                <label for="angka2" class="form-label">Angka Kedua</label>
+                                <input type="number" class="form-control" id="angka2" placeholder="Masukkan angka kedua" required>
+                            </div>
+
+                            <!-- Tombol Hitung -->
+                            <button type="submit" class="btn btn-primary w-100 mt-2">Hitung Hasil</button>
+                        </form>
+
+                        <!-- Tampilan Hasil -->
+                        <div class="mt-4 p-3 bg-light rounded text-center border">
+                            <h6 class="text-muted mb-1">Hasil:</h6>
+                            <h3 id="hasilKalkulator" class="fw-bold text-success mb-0">0</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Bootstrap & JS Logic Kalkulator -->
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../Javascript/kalkulator.js"></script>
+</body>
+</html>
